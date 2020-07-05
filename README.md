@@ -2,6 +2,10 @@
 
 This app allows you to keep track of your daily calorie intakes. This app has been built using React, Mobx, TailwindCSS. Backend used is a Node.js API service.
 
+## USAGE
+Run `npm run build` to compile a production build and start a server from the build folder to use the app. You can use `serve` to
+run a server `npm i -g serve` followed by `serve` in console. The server opens at port 5000 by default.
+
 ## FUNCTIONAL REQUIREMENTS
 1. User must be able to create an account and log in.
 2. User should be able to add, edit or delete Meals.
