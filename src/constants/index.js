@@ -7,5 +7,15 @@ export default {
   authLoginBtn: 'Sign in',
   authRegisterBtn: 'Sign up',
   congratulations: 'Congratulations!',
-  registerSuccess: 'You have successfully registered! Please sign in to access Meals Planner.'
+  registerSuccess: 'You have successfully registered! Please sign in to access Meals Planner.',
+  addMeal: 'Add A Meal',
+  add: 'Add',
+  updateMeal: 'Update A Meal',
+  update: 'Update',
+  calorie: 'Calories: ',
+  deleteMeal: 'Delete ',
+  deleteMealWarning: 'Are you sure you want to delete?',
+  yes: 'Yes',
+  no: 'No',
+  totalCalories: 'Total Calories: '
 }

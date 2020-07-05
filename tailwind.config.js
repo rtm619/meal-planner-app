@@ -17,6 +17,8 @@ module.exports = {
       lightgrey: '#e6e6e6',
       black: '#000',
       white: '#fff',
+      darkgreen: '#009936',
+      darkyellow: '#b5b500',
     },
     spacing: {
       px: '1px',
@@ -292,6 +294,7 @@ module.exports = {
     width: (theme) => ({
       auto: 'auto',
       ...theme('spacing'),
+      '320': '320px',
       '1/2': '50%',
       '1/3': '33.333333%',
       '2/3': '66.666667%',
@@ -451,7 +454,7 @@ module.exports = {
     borderOpacity: ['responsive', 'hover', 'focus'],
     borderRadius: ['responsive'],
     borderStyle: ['responsive'],
-    borderWidth: ['responsive'],
+    borderWidth: ['responsive', 'hover'],
     boxShadow: ['responsive', 'hover', 'focus'],
     boxSizing: ['responsive'],
     cursor: ['responsive'],

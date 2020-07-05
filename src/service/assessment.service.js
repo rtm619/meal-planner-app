@@ -27,3 +27,39 @@ export const authRegister = async (displayName, email, password) => {
   })
   return data
 }
+
+export const getAllMeals = async (token) => {
+  const { data } = await Axios.get(`${domainUrl}/meals/get-all`, {
+    headers: {
+      'Authorization': `Bearer ${token}`
+    }
+  })
+  return data
+}
+
+export const addMeal = async (token, mealObject) => {
+  const { data } = await Axios.post(`${domainUrl}/meals/add`, mealObject, {
+    headers: {
+      'Authorization': `Bearer ${token}`
+    }
+  })
+  return data
+}
+
+export const updateMeal = async (token, mealId, mealObject) => {
+  const { data } = await Axios.put(`${domainUrl}/meals/update/${mealId}`, mealObject, {
+    headers: {
+      'Authorization': `Bearer ${token}`
+    }
+  })
+  return data
+}
+
+export const deleteMeal = async (token, mealId) => {
+  const { data } = await Axios.delete(`${domainUrl}/meals/delete/${mealId}`, {
+    headers: {
+      'Authorization': `Bearer ${token}`
+    }
+  })
+  return data
+}

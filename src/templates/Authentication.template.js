@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Helmet from 'react-helmet'
 
 import styles from './styles/Authentication.style'
 import constants from '../constants'
@@ -8,6 +9,10 @@ import Register from '../components/Auth/Register'
 class Authentication extends Component {
   render() {
     return (
+      <>
+      <Helmet>
+        <title>Meal Planner - Login</title>
+      </Helmet>
       <div className={styles.wrapper} >
         <div className={styles.introWrapper} >
           <h2 className={styles.introText} >
@@ -21,6 +26,7 @@ class Authentication extends Component {
           <Register />
         </div>
       </div>
+      </>
     )
   }
 }

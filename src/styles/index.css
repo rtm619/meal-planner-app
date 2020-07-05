@@ -1,3 +1,12 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@screen mdl {
+  .meal-btn {
+   opacity: 0;
+  }
+  .meal-card:hover .meal-btn {
+    opacity: 1;
+  }
+}

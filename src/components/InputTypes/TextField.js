@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import styles from './styles/TextField.style'
 
-const TextField = ({ id, name, type, value, onChange, onBlur, placeholder, label, hasError, errorText }) => {
+const TextField = ({ id, name, type, value, onChange, onBlur, placeholder, label, hasError, errorText, ...others }) => {
   return (
     <div className={styles.wrapper} >
       <label className={styles.label} htmlFor={id} >{label}</label>
@@ -16,6 +16,7 @@ const TextField = ({ id, name, type, value, onChange, onBlur, placeholder, label
         onBlur={onBlur}
         placeholder={placeholder}
         className={hasError ? styles.fieldError : styles.field}
+        {...others}
       />
       {hasError && <span className={styles.errorText}>{errorText}</span>}
     </div>
