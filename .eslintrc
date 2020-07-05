@@ -1,0 +1,32 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "commonjs": true,
+        "jest": true,
+        "node": true
+    },
+    "rules": {
+        "linebreak-style": ["error","windows"],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/jsx-props-no-spreading": "off",
+        "react/no-danger": "off",
+        "react/forbid-prop-types": "off",
+        "react/require-default-props": "off",
+        "react/static-property-placement": "off",
+        "no-tabs": "off",
+        "no-mixed-spaces-and-tabs": "off",
+        "indent": "off"
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "legacyDecorators": true
+        }
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:jsx-a11y/recommended"
+    ]
+}
