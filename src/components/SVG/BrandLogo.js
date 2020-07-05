@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Loader = ({ className, style }) => {
+const BrandLogo = ({ className, style }) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" className={className} style={style}>
       <g>
@@ -56,14 +56,14 @@ const Loader = ({ className, style }) => {
   )
 }
 
-Loader.propTypes = {
+BrandLogo.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
 }
 
-Loader.defaultProps = {
+BrandLogo.defaultProps = {
   className: '',
   style: {}
 }
 
-export default Loader
+export default BrandLogo

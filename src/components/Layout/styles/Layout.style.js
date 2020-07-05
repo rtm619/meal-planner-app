@@ -1,5 +1,5 @@
 export default {
-  headerWrapper: 'w-full flex flex-wrap bg-white py-20 px-10 md:px-20',
+  headerWrapper: 'w-full flex flex-wrap bg-white py-20 px-10 md:px-20 border-b border-darkblue',
   logoWrapper: 'hidden md:block md:w-1/3 flex',
   logo: 'w-40 h-40 text-darkblue fill-current mx-auto',
   textWrapper: 'w-3/5 md:w-1/3 flex items-center justify-center',

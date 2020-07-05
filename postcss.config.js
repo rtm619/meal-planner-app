@@ -20,7 +20,7 @@ module.exports = {
         whitelistPatterns: [],
         whitelist: ['text-orange'],
         defaultExtractor: (content) => content.match(/[A-Za-z0-9-_:/%]+/g) || [],
-        content: ['./src/components/**/*.js', './src/pages/**/*.js', './src/templates/**/*.js'],
+        content: ['./src/components/**/*.js', './src/templates/**/*.js'],
       },
     }),
   },

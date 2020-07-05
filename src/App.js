@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import { observer, inject } from 'mobx-react'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
 
 import './index.generated.css'
 import allRoutes from './routes'
@@ -11,6 +11,15 @@ import Layout from './components/Layout/Layout';
 class App extends React.Component {
   static propTypes = {
     authStore: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
+  }
+
+  componentDidMount = async () => {
+    const { authStore, history } = this.props
+    const response = await authStore.init()
+    if(response){
+      history.push('/meals')
+    }
   }
 
   render() {
@@ -19,7 +28,7 @@ class App extends React.Component {
       <Layout>
         <Switch>
           {allRoutes.map((RouteItem, index) => (
-            <Route key={index} path={RouteItem.url}>
+            <Route key={index} exact={RouteItem.exact} path={RouteItem.url}>
               {(RouteItem.isGuarded && authStore.isLoggedIn) ? (
                 <React.Suspense fallback={<Loader />} >
                   <RouteItem.Component />
@@ -41,4 +50,4 @@ class App extends React.Component {
   }
 }
 
-export default inject('authStore')(observer(App));
+export default withRouter(inject('authStore')(observer(App)))

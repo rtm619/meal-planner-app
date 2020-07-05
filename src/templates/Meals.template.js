@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import styles from './styles/Meals.style'
+
 export default class Meals extends Component {
   static propTypes = {
     
@@ -8,8 +10,8 @@ export default class Meals extends Component {
 
   render() {
     return (
-      <div>
-        
+      <div className={styles.wrapper} >
+        Welcome to meals
       </div>
     )
   }
