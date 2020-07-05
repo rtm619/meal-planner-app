@@ -23,7 +23,7 @@ class Meals extends Component {
           <div className={styles.wrapper}>
             <div className={styles.greetingsWrapper}>
               <h2 className={styles.greeting}>
-                {authStore.user.displayName}
+                {`Hi ${authStore.user.displayName}!`}
               </h2>
             </div>
             <MealsContainer />
