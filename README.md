@@ -3,6 +3,9 @@
 This app allows you to keep track of your daily calorie intakes. This app has been built using React, Mobx, TailwindCSS. Backend used is a Node.js API service.
 
 ## USAGE
+Add a `.env` file in your root and add the following ENV VARIABLES:
+`REACT_APP_ASSESSMENT_API=Your assessment API domain`
+
 Run `npm run build` to compile a production build and start a server from the build folder to use the app. You can use `serve` to
 run a server `npm i -g serve` followed by `serve` in console. The server opens at port 5000 by default.
 
